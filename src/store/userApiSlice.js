@@ -4,7 +4,7 @@ import axios from "axios";
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
-const AUTH_URL = "https://back-5rnx.onrender.com/";
+const AUTH_URL = "https://back-5rnx.onrender.com";
 
 // Action Types
 export const SIGN_IN = "user/signIn";
