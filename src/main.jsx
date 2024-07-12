@@ -39,6 +39,7 @@ const AppRoutes = () => {
   return (
     <Routes>
       <Route path="/login" element={<SignInForm />} />
+      <Route path="/signup" element={<SignUpForm />} />
       <Route
         path="/request-password-reset"
         element={<RequestPasswordReset />}
