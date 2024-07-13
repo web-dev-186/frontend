@@ -34,11 +34,6 @@ const PrivateRoute = ({ children }) => {
   const { userInfo } = useSelector((state) => state.auth);
   return userInfo ? children : <Navigate to="/login" />;
 };
-const PrivateRoute = ({ children }) => {
-  const { userInfo } = useSelector((state) => state.auth);
-  return userInfo ? children : <Navigate to="/login" />;
-};
-
 const AppRoutes = () => {
   return (
     <Routes>
