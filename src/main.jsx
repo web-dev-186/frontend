@@ -47,7 +47,7 @@ const AppRoutes = () => {
         <Route path="/plan" element={<Pricing />} />
         <Route path="/profile" element={<Profile />} />
       </Route>
-      <Route path="*" element={<Navigate to="/login" />} />
+      <Route path="*" element={<Navigate to="/" />} />
     </Routes>
   );
 };
