@@ -80,7 +80,7 @@ const Services = () => {
             <Card className="service-card">
               <div className="service-card__icon">{service.icon}</div>
               <div className="service-card__content">
-                <Title level={4} className="service-card__title">
+                <Title level={4} className="service-card__title" style={{ color: "black" }}>
                   {service.title}
                 </Title>
                 <Text className="service-card__description">
