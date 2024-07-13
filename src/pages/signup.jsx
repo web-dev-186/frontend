@@ -19,8 +19,7 @@ const SignUpForm = () => {
     setLoading(true);
     try {
       const userData = await dispatch(signUpAsync(values)).unwrap();
-      dispatch(setCredentials(userData));
-      localStorage.setItem("userInfo", JSON.stringify(userData));
+
       toast.success("Inscription réussie");
       history.push("/");
     } catch (error) {
