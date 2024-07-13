@@ -1,5 +1,3 @@
-// Pricing.jsx
-
 import React, { useState } from "react";
 import { SectionHeading } from "../../components/SectionHeading/SectionHeading.jsx";
 import { Container } from "../../components/Container/Container.jsx";
@@ -9,11 +7,13 @@ import CheckoutForm from "../CheckoutForm/CheckoutForm.jsx";
 import stripePromise from "../../stripe/StripeConfig.js";
 import axios from "axios";
 import { useSelector } from "react-redux"; // Import useSelector from react-redux
+import { useNavigate } from "react-router-dom"; // Import useNavigate from react-router-dom
 
 const Pricing = () => {
   const [isModalVisible, setIsModalVisible] = useState(false);
   const [selectedPlan, setSelectedPlan] = useState({});
   const userId = useSelector((state) => state.auth.userInfo.id); // Fetch userId from Redux store
+  const navigate = useNavigate(); // Initialize useNavigate
 
   const priceList = [
     {
@@ -125,6 +125,9 @@ const Pricing = () => {
     <section id="pricing" className="pricing">
       <Container>
         <SectionHeading heading="Our Plans" />
+        <Button onClick={() => navigate(-1)} style={{ marginBottom: "20px" }}>
+          Back
+        </Button>
         <Row gutter={[24, 24]} justify="center">
           {priceList.map((price, index) => (
             <Col key={index} xs={24} sm={20} md={12} lg={8}>
