@@ -41,11 +41,12 @@ const AppRoutes = () => {
       <Route path="/signup" element={<SignUpForm />} />
       <Route path="/request-password-reset" element={<RequestPasswordReset />} />
       <Route path="/reset-password/:token" element={<ResetPassword />} />
-      <Route path="/" element={<App />}>
-        <Route index element={<LandingPage />} />
         <Route path="/hopital" element={<HospitalList />} />
         <Route path="/plan" element={<Pricing />} />
         <Route path="/profile" element={<Profile />} />
+      <Route path="/" element={<App />}>
+        <Route index element={<LandingPage />} />
+      
       </Route>
       <Route path="*" element={<Navigate to="/" />} />
     </Routes>
